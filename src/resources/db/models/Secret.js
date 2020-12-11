@@ -16,6 +16,7 @@ const Schema = {
         giver: String, // que tirou o papel dom o nome do amigo secreto ( que dá o presente )
         receiver: String, // é nome de que estava no papel ( quem recebe o presente )
     }], // array de resultado o sorteio do amigo secreto
+    
 }
 
 module.exports = mongoose.model('Secret', Schema)

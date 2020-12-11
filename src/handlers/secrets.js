@@ -15,7 +15,6 @@ module.exports.create = async (event, context) => {
 
     const { name, email } = JSON.parse(event.body) // é o obj que a Lambda vai receber - vem como string, o json é para mandar no formato correto para API
 
-   
 
     try {
         await SecretModel.create({

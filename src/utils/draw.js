@@ -11,6 +11,7 @@ module.exports = (participants) => {
         receiver: shuffled[i + 1], // array embaralhado na posição +1, isto é o seguinte
        }) 
     }
+    
 
     result.push({
         giver: shuffled[total-1], // pega o penultimo

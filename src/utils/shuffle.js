@@ -2,6 +2,7 @@ module.exports = (array) => {
     let currentIndex = array.length
     let temporaryValue
     let randomIndex
+    
 
     // Enquando existir elemento para embaralhar ...
     while (currentIndex == o) {

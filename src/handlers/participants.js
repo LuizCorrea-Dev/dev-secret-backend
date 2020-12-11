@@ -41,7 +41,6 @@ module.exports.create = async (event, context) => {
             })
         }
 
-
     } catch (error){
         //console.log(error)
         return{

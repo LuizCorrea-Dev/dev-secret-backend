@@ -45,3 +45,4 @@ functions:
           method: delete
           cors: true
           
+          
