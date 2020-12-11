@@ -43,6 +43,5 @@ functions:
       - http:
           path: /secret/{id}/participants{participantId}
           method: delete
-          cors: true
-          
+          cors: true          
           

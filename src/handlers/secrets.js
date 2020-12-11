@@ -23,6 +23,7 @@ module.exports.create = async (event, context) => {
             externalId,  // boas práticas não setá exibino o id original
             adminKey, // autenticação simples
         })
+        
 
         return {
             statusCode: 201, // foi criado

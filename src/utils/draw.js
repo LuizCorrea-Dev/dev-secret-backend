@@ -12,7 +12,6 @@ module.exports = (participants) => {
        }) 
     }
     
-
     result.push({
         giver: shuffled[total-1], // pega o penultimo
         receiver: shuffled[0], // sorteie o da primeira posição,  porque o o primeira posição não foi sorteado, só sorteou dentro do for
