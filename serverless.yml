@@ -1,0 +1,47 @@
+service: dev-secret
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+plugins:
+  - serverless-offline
+
+functions:
+  create: #funcção principal
+    handler: src/handlers/secrets.create
+    events:
+      - http:
+          path: /secret/
+          method: post
+          cors: true
+  get: # função de listar
+    handler: src/handlers/secrets.get 
+    events:
+      - http:
+          path: /secret/{id} # listar uma expecifico
+          method: get
+          cors: true
+  draw: # funcão de sorteio
+    handler: src/handlers/secrets.draw
+    events:
+      - http:
+          path: /secret/{id}/draw
+          method: put
+          cors: true
+  createParticipant: # funcão de adicionar participantes
+    handler: src/handlers/participants.create
+    events:
+      - http:
+          path: /secret/{id}/participants
+          method: post
+          cors: true
+  deleteParticipant: # funcão de excluir participantes
+    handler: src/handlers/participants.delete
+    events:
+      - http:
+          path: /secret/{id}/participants{participantId}
+          method: delete
+          cors: true
+          
